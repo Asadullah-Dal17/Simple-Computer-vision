@@ -12,8 +12,11 @@ while True:
     edges_frame = cv.Canny(denoise_frame, 100,200)
     cv.imshow('Edges', edges_frame)
     dilate_frame = cv.dilate(edges_frame, (3,3), iterations=5)
-    
     cv.imshow('Dilated_Edges', dilate_frame)
+
+    erode_frame = cv.erode(dilate_frame, (3,3), iterations=5)
+    cv.imshow('erode_frame', erode_frame)
+    
     fps = frame_counter/(time.time() - start_time)
     # print(fps)
 
