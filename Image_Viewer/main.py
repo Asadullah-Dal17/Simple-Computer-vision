@@ -12,8 +12,10 @@ for file in files:
     height, width = img.shape[:2]
     if height!=width:
         print("not Square")
+        ns_path = os.path.join(not_square, file)
+        os.rename(img_path, ns_path)
     else:
         print("Square")
-
+    
     # cv.imshow('img', img)
     # cv.waitKey(0)
