@@ -4,6 +4,7 @@ import os
 def load_images(dir_path):
     #  getting the list of file in the dir
     files = os.listdir(dir_path)
+    loaded_image = []
     for file in files:
         # creating complete image path 
         img_path = os.path.join(dir_path, file)
@@ -17,9 +18,14 @@ def load_images(dir_path):
             resize_img=cv.resize(img, None, fx=(700/height), fy=(700/height), interpolation=cv.INTER_AREA)
         else:
             resize_img=cv.resize(img, None, fx=(700/width), fy=(700/width), interpolation=cv.INTER_AREA)
-        cv.imshow('resize', resize_img)
-        cv.waitKey(0)
+        # cv.imshow('resize', resize_img)
+        # cv.waitKey(0)
+        loaded_image.append(resize_img)
+    return loaded_image
 # images directory path 
 dir_path ='../images'
-load_images(dir_path)
+images_list =load_images(dir_path)
     # cv.resize()
+for img in images_list:
+    cv.imshow('img', img)
+    cv.waitKey(0)
