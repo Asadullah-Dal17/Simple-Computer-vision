@@ -21,9 +21,12 @@ def load_images(dir_path):
         # cv.imshow('resize', resize_img)
         # cv.waitKey(0)
         loaded_image.append(resize_img)
+    print('loaded all files .')
+    
     return loaded_image
 # images directory path 
 dir_path ='../images'
+print('loading...')
 images_list =load_images(dir_path)
     # cv.resize()
 for img in images_list:
