@@ -28,11 +28,18 @@ def load_images(dir_path):
     print('loaded all files .')
     
     return loaded_image
-
+dir_path = '../images'
+loaded_images =load_images(dir_path)
+img = loaded_images[0]
+height, width = img.shape[:2]
+RGB_img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 # creating GUI 
-window = tk.Tk()
-window.title("Image Viewer")
+root = tk.Tk()
+root.title("Image Viewer")
 
-canvas =tk.Canvas( window, width=720, height=720)
+img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(RGB_img))
+
+canvas = tk.Canvas(root, width = width, height = height)
 canvas.pack()
-window.mainloop() 
+canvas.create_image(0, 0, image=img_tk, anchor=tk.NW)
+root.mainloop() 
