@@ -8,7 +8,7 @@
 - [ ] Functionality of Changing Images 
 ###  Advance Features➡️
 
-- [ ] Blurring Image
+- [ ] Blurring Image💫
 - [ ] Blurring Selected Region 
 - [ ] Face Detection 
 - [ ] Changing Color Space 

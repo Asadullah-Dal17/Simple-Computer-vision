@@ -9,7 +9,7 @@ def previous(img_list):
     print(counter_1)
     if counter_1 <0:
         counter_1 =0
-    print('previous button pressed')
+    print('previous button pressed 🌹🌹🌹🌹')
 def Next(img_list):
     global counter_1
     counter_1 +=1
