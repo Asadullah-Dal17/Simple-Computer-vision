@@ -6,25 +6,23 @@ counter_1 =0
 def previous(img_list):
     global counter_1
     counter_1 -=1
-    print(counter_1)
+    # print(counter_1)
     if counter_1 <0:
         counter_1 =0
     image = img_list[counter_1]
-    RGB_img = cv.cvtColor(image, cv.COLOR_BGR2RGB)
-    img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(RGB_img))
+    img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(image))
     panel.config(image=img_tk)
     panel.image = img_tk
-    print('previous button pressed ')
+    # print('previous button pressed ')
 
 def Next(img_list):
     global counter_1
     counter_1 +=1
-    print(counter_1)
-    if counter_1 >len(img_list):
+    # print(counter_1)
+    if counter_1 >=len(img_list):
         counter_1 =0
     image = img_list[counter_1]
-    RGB_img = cv.cvtColor(image, cv.COLOR_BGR2RGB)
-    img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(RGB_img))
+    img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(image))
     panel.config(image=img_tk)
     panel.image = img_tk
     # RGB_img = cv.cvtColor(img_list[0], cv.COLOR_BGR2RGB)
@@ -51,7 +49,9 @@ def load_images(dir_path):
             resize_img=cv.resize(img, None, fx=(value/width), fy=(value/width), interpolation=cv.INTER_AREA)
         # cv.imshow('resize', resize_img)
         # cv.waitKey(0)
-        loaded_image.append(resize_img)
+        RGB_img = cv.cvtColor(resize_img, cv.COLOR_BGR2RGB)
+        
+        loaded_image.append(RGB_img)
     print('loaded all files .')
     
     return loaded_image
@@ -77,6 +77,7 @@ bottom.pack(side="bottom")
 panel = tk.Label(root, image = img_tk)
 panel.image = img_tk # keep a reference!
 panel.pack(side = "top", fill = "both", expand = "yes")
+panel.padding(10)
 
 
 # canvas = tk.Canvas(root, width = width, height = height)

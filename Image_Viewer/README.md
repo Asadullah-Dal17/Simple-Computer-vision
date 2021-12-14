@@ -5,7 +5,7 @@
 - [x] View the images 🖼️
 - [x] Loading in Multiple Images 🖼️ 
 - [x] Add Buttons To Go *NEXT* ⏭️ and *PREVIOUS* ⏮️ Image
-- [ ] Functionality of Changing Images 
+- [x] Functionality of Changing Images 
 ###  Advance Features➡️
 
 - [ ] Blurring Image💫
