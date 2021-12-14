@@ -4,8 +4,9 @@
 ### Basic Part➡️
 - [x] View the images 🖼️
 - [x] Loading in Multiple Images 🖼️ 
-- [ ] Add Buttons To Go *NEXT* ⏭️ and *PREVIOUS* ⏮️ Image
-### Advance Features➡️
+- [x] Add Buttons To Go *NEXT* ⏭️ and *PREVIOUS* ⏮️ Image
+- [ ] Functionality of Changing Images 
+###  Advance Features➡️
 
 - [ ] Blurring Image
 - [ ] Blurring Selected Region 
