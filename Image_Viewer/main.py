@@ -85,6 +85,6 @@ panel.pack(side = "top", fill = "both", expand = "yes")
 next_btn = tk.Button(root, text="Next", width=10, height=2, command=lambda: Next(loaded_images))
 previous_btn = tk.Button(root, text="Previous", width=10, height=2, command=lambda: previous( loaded_images))
 
-next_btn.pack(side="right",padx=30)
-previous_btn.pack(side="left", padx=30)
+next_btn.pack(side="right",padx=40)
+previous_btn.pack(side="left", padx=40)
 root.mainloop() 
