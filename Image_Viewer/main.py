@@ -77,15 +77,14 @@ bottom.pack(side="bottom")
 panel = tk.Label(root, image = img_tk)
 panel.image = img_tk # keep a reference!
 panel.pack(side = "top", fill = "both", expand = "yes")
-panel.padding(10)
 
 
 # canvas = tk.Canvas(root, width = width, height = height)
 # canvas.pack()
 # canvas.create_image(50, 50, image=img_tk, anchor=tk.NW)
-next_btn = tk.Button(root, text="Next", width=6, height=1, command=lambda: Next(loaded_images))
-previous_btn = tk.Button(root, text="Previous", width=6, height=1, command=lambda: previous( loaded_images))
-next_btn.pack()
-previous_btn.pack()
+next_btn = tk.Button(root, text="Next", width=10, height=2, command=lambda: Next(loaded_images))
+previous_btn = tk.Button(root, text="Previous", width=10, height=2, command=lambda: previous( loaded_images))
 
+next_btn.pack(side="right",padx=30)
+previous_btn.pack(side="left", padx=30)
 root.mainloop() 
