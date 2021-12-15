@@ -4,7 +4,7 @@ simple and short computer vision projects
 
 - [x] [Edges Detection ](https://github.com/Asadullah-Dal17/Simple-Computer-vision/tree/master/Edge-Detection)🔷
 
-- [ ] [Simple Images View with TKinter](https://github.com/Asadullah-Dal17/Simple-Computer-vision/tree/master/Image_Viewer)🌟🌟
+- [x] [Simple Images View with TKinter](https://github.com/Asadullah-Dal17/Simple-Computer-vision/tree/master/Image_Viewer)🌟🌟
 
 if You found this Helpful, please star :star: it.
 
