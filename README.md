@@ -4,8 +4,9 @@ simple and short computer vision projects
 
 - [x] [Edges Detection ](https://github.com/Asadullah-Dal17/Simple-Computer-vision/tree/master/Edge-Detection)🔷
 
-- [x] [Simple Images View with TKinter](https://github.com/Asadullah-Dal17/Simple-Computer-vision/tree/master/Image_Viewer)🌟🌟
-
+- [x] [Simple Images View with TKinter](https://github.com/Asadullah-Dal17/Simple-Computer-vision/tree/master/Image_Viewer)
+🌟🌟
+- [x] QR code Detection With Opencv-python only 
 if You found this Helpful, please star :star: it.
 
 You can Watch my Video Tutorial on Computer Vision Topics, just check out my YouTube Channel <a href="https://www.youtube.com/c/aiphile">  <img alt="AiPhile Youtube" src="https://user-images.githubusercontent.com/66181793/131223988-882d53a0-4882-468f-9bd7-46b46466baae.png"  width="20"> </a>
