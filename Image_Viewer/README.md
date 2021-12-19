@@ -7,11 +7,10 @@
 - [x] Add Buttons To Go *NEXT* ⏭️ and *PREVIOUS* ⏮️ Image
 - [x] Functionality of Changing Images 
 ###  Advance Features➡️
-
 - [ ] Blurring Image💫
-- [ ] Blurring Selected Region 
 - [ ] Face Detection 
 - [ ] Changing Color Space 
+- [ ] Blurring Selected Region 
 
 
 if You found this Helpful, please star :star: it.
