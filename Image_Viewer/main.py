@@ -1,15 +1,25 @@
+from tkinter.constants import LEFT
 import cv2 as cv 
 import os
 import tkinter as tk
 import PIL.Image, PIL.ImageTk
 counter_1 =0
+blure_state =False
+def fun(x):
+    print(x)
+
 def previous(img_list):
     global counter_1
     counter_1 -=1
     # print(counter_1)
     if counter_1 <0:
         counter_1 =0
+        
     image = img_list[counter_1]
+    
+    if blure_state==True:
+        image =cv.blur(image, (33,33)) 
+
     img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(image))
     panel.config(image=img_tk)
     panel.image = img_tk
@@ -60,9 +70,11 @@ loaded_images =load_images(dir_path)
 height=600
 width=600
 # creating GUI 
+blure_state =False
 root = tk.Tk()
 root.title("Image Viewer")
 image =loaded_images[0]
+
 # img = loaded_images[0]
 # height, width = image.shape[:2]
 # creating new windown with in window 
@@ -70,6 +82,9 @@ RGB_img = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 img_tk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(RGB_img))
 #divide window into two sections. One for image. One for buttons
 
+
+center =tk.Frame(root)
+center.pack(side="left")
 top = tk.Frame(root)
 top.pack(side="top")
 bottom = tk.Frame(root)
@@ -82,9 +97,10 @@ panel.pack(side = "top", fill = "both", expand = "yes")
 # canvas = tk.Canvas(root, width = width, height = height)
 # canvas.pack()
 # canvas.create_image(50, 50, image=img_tk, anchor=tk.NW)
+blur_btn = tk.Button(root, text="blur", width=10, height=2, command=fun(x=True))
 next_btn = tk.Button(root, text="Next", width=10, height=2, command=lambda: Next(loaded_images))
 previous_btn = tk.Button(root, text="Previous", width=10, height=2, command=lambda: previous( loaded_images))
-
+blur_btn.pack(side="bottom")
 next_btn.pack(side="right",padx=40)
 previous_btn.pack(side="left", padx=40)
 root.mainloop() 
