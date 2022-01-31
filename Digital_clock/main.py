@@ -7,7 +7,7 @@ while True:
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-    print(current_time)
+    # print(current_time)
     cv.putText(
         img=img,
         text=f"Time: {current_time}",
